@@ -3,33 +3,31 @@
 This project serves as a starter template for a typical list/details Android coding problem.  The project utilizes the latest Android libraries including Jetpack Compose,
 Dagger Hilt, Retrofit, Coil, Timber, MockK, Espresso, and Kotlin DSL gradle build scripts. 
 
-## Features
+## Architecture and Design Decisions
 
-- **Architecture:** MVVM architecture
-- **UI:** Jetpack Compose for UI and Navigation
-- **Networking:** Utilizes Retrofit for API calls to fetch data from the GitHub API
-- **Dependency Injection:** Leverages Dagger Hilt for dependency management
-- **Testing:** Includes unit tests with MockK and Compose UI screenshot tests with Espresso
+**Single Module:** This app uses a single module due to its small project size. For larger and more complex projects, a modular architecture—such as separating domain, data, and feature modules—would be a cleaner and more scalable approach.
+
+**Overengineering:** While separating the data and UI layers with a domain layer may seem excessive for this project, it serves as an intentional demonstration of clean architecture principles.
+
+**Paging:** I implemented a custom paging solution instead of using the Paging 3 library because the project deals with a small amount of data for each item. My own testing showed that even with a theoretical load of one million pages, the app did not encounter out of memory issues, making a third-party library unnecessary for this use case.
+
+**Future Improvements:** Additional unit tests and screenshot tests could enhance the project. For instance, unit tests for the mapper are currently missing and should be added to ensure better test coverage.
 
 ## Project Overview
 
 The app fetches a list of GitHub repositories from the [GitHub API](https://docs.github.com/en/rest) and displays them in a list. When a repository is tapped, the app navigates to a detailed view showing 
 additional information about the selected repository.  Paging is supported by swiping up on the list page.
 
-### Key Screens
-1. **Repository List:** Displays a list of repositories with key details like name, description, and star count
-2. **Repository Details:** Shows detailed information about a specific repository
-
 ## Libraries
 
 - **Language:** Kotlin
-- **UI Framework:** Jetpack Compose
+- **UI:** Jetpack Compose, Coil
 - **Navigation:** Compose Navigation
 - **Networking:** Retrofit
 - **Dependency Injection:** Dagger Hilt
 - **Architecture:** MVVM
-- **Testing:** MockK for unit testing, Jetpack Compose for screenshot tests
-- **Build System:** Gradle with Kotlin DSL
+- **Testing:** MockK, Espresso
+- **Build Scripts:** Kotlin DSL
 
 ## Setup
 
