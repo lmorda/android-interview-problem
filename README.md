@@ -1,6 +1,6 @@
-# android-homework-problem
+# android-interview-problem
 
-This project serves as a starter template for a typical list/details Android coding problem.  The project utilizes the latest Android libraries including Jetpack Compose,
+This project serves as a starter template for a typical list/details Android interview homework problem.  The project utilizes the latest Android libraries including Jetpack Compose,
 Dagger Hilt, Retrofit, Coil, Timber, MockK, Espresso, and Kotlin DSL gradle build scripts. 
 
 ## Architecture and Design Decisions
@@ -37,7 +37,7 @@ additional information about the selected repository.  Paging is supported by sw
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/lmorda/android-homework-problem.git
+   git clone https://github.com/lmorda/android-interview-problem.git
    ```
 2. Open the project in Android Studio
 3. Sync Gradle
